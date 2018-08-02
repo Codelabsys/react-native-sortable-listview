@@ -300,6 +300,9 @@ class SortableListView extends React.Component {
 
   handleContentSizeChange = (width, height) => {
     this.scrollContainerHeight = height
+    if (this.scrollValue > 0) {
+      this.scrollTo({ y: height, animated: !this.props.disableAnimatedScrolling });
+    }
   }
 
   scrollAnimation = () => {
