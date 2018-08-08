@@ -291,6 +291,7 @@ class SortableListView extends React.Component {
 
   handleListLayout = e => {
     this.listLayout = e.nativeEvent.layout
+    this.measureWrapper();
   }
 
   handleScroll = e => {
